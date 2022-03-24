@@ -11,7 +11,7 @@ entity zerador16 is
 	      a   : in STD_LOGIC_VECTOR(15 downto 0);
         y   : out STD_LOGIC_VECTOR(15 downto 0)
       );
-end zerador16;
+end entity;
 
 architecture rtl of zerador16 is
   -- Aqui declaramos sinais (fios auxiliares)

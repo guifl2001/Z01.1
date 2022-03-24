@@ -33,7 +33,7 @@ entity ALU is
 			nx:    in STD_LOGIC;                     -- inverte a entrada x
 			zy:    in STD_LOGIC;                     -- zera a entrada y
 			ny:    in STD_LOGIC;                     -- inverte a entrada y
-			f:     in STD_LOGIC;                     -- se 0 calcula x & y, senão x + y
+			f:     STD_LOGIC_VECTOR(1 downto 0);                     -- se 0 calcula x & y, senão x + y
 			no:    in STD_LOGIC;                     -- inverte o valor da saída
 			zr:    out STD_LOGIC;                    -- setado se saída igual a zero
 			ng:    out STD_LOGIC;                    -- setado se saída é negativa
@@ -78,39 +78,55 @@ architecture  rtl OF alu is
 
 	component comparador16 is
 		port(
-			a   : in STD_LOGIC_VECTOR(15 downto 0);
+			a    : in STD_LOGIC_VECTOR(15 downto 0);
 			zr   : out STD_LOGIC;
 			ng   : out STD_LOGIC
     );
 	end component;
 
-	component Mux16 is
-		port (
-			a:   in  STD_LOGIC_VECTOR(15 downto 0);
-			b:   in  STD_LOGIC_VECTOR(15 downto 0);
-			sel: in  STD_LOGIC;
-			q:   out STD_LOGIC_VECTOR(15 downto 0)
-		);
+	component Mux4Way16 is
+		port ( 
+				a:   in  STD_LOGIC_VECTOR(15 downto 0);
+				b:   in  STD_LOGIC_VECTOR(15 downto 0);
+				c:   in  STD_LOGIC_VECTOR(15 downto 0);
+				d:   in  STD_LOGIC_VECTOR(15 downto 0);
+				sel: in  STD_LOGIC_VECTOR(1 downto 0);
+				q:   out STD_LOGIC_VECTOR(15 downto 0));
 	end component;
 
-   SIGNAL zxout,zyout,nxout,nyout,andout,adderout,muxout,precomp: std_logic_vector(15 downto 0);
+	component xor16 is
+		port(
+			  a   : in STD_LOGIC_VECTOR(15 downto 0);
+			  b   : in STD_LOGIC_VECTOR(15 downto 0);
+			  y   : out STD_LOGIC_VECTOR(15 downto 0)
+			);
+	  end component;
+
+   SIGNAL zxout,zyout,nxout,nyout,andout,adderout, xorout,muxout,precomp: std_logic_vector(15 downto 0);
 
 begin
   -- Implementação vem aqui!
-  x_zero: zerador16 port map(zx, x, zxout);
-  y_zero: zerador16 port map(zy, y, zyout);
+  x_zero: zerador16 port map(z => zx, a => x, y => zxout);
+  y_zero: zerador16 port map(z => zy, a => y, y => zyout);
 
-  x_inverte: inversor16 port map(nx, zxout, nxout);
-  y_inverte: inversor16 port map(ny, zyout, nyout);
+  x_inverte: inversor16 port map(z => nx, a => zxout, y => nxout);
+  y_inverte: inversor16 port map(z => ny, a => zyout, y => nyout);
 
-  XandY: And16 port map(nxout, nyout, andout);
-  XaddY: Add16 port map(nxout, nyout, adderout);
+  XandY: And16 port map(a => nxout, b => nyout, q => andout);
+  XaddY: Add16 port map(a => nxout, b => nyout, q => adderout);
+  XxorY: xor16 port map(a => nxout, b => nyout, y => xorout);
 
-  Mux: Mux16 port map(andout, adderout, f, muxout);
+  Mux: Mux4Way16 port map(
+	  a => andout, 
+	  b => adderout, 
+	  c => xorout, 
+	  d => "0000000000000000",
+	  sel => f, 
+	  q => muxout);
 
-  Mux_inverte: inversor16 port map(no, muxout, precomp);
+  Mux_inverte: inversor16 port map(z => no, a => muxout, y => precomp);
 
-  Comparador: comparador16 port map(precomp, zr, ng);
+  Comparador: comparador16 port map(a => precomp, zr => zr, ng => ng);
 
   saida <= precomp;
 

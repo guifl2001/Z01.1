@@ -55,8 +55,11 @@ architecture rtl of TopLevel is
 ---------------
 -- implementacao
 ---------------
+signal carry : STD_LOGIC;
 begin
 
-  u1 : HalfAdder port map(a => SW(0), b=> SW(1), soma => LEDR(0), vaium => LEDR(1));
+  u1 : FullAdder port map(a => SW(0), b => SW(2), c => '0', soma => LEDR(0), vaium => carry);
+  u2 : FullAdder port map(a => SW(1), b => SW(3), c => carry, soma => LEDR(1), vaium => LEDR(3));
+  -- u1 : HalfAdder port map(a => SW(0), b=> SW(1), soma => LEDR(0), vaium => LEDR(1));
 
 end rtl;

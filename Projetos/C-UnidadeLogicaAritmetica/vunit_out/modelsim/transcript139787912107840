@@ -1,0 +1,38 @@
+# do /home/borg/.local/lib/python3.8/site-packages/vunit/sim_if/tcl_read_eval_loop.tcl
+# vsim -modelsimini /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/vunit_out/modelsim/modelsim.ini -wlf /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/vunit_out/test_output/lib.tb_inc16.all_2eeb55b34fbd7b5d1c8fa04094fa8e04485ace6a/modelsim/vsim.wlf -quiet -t ps -onfinish stop lib.tb_inc16(tb) -L vunit_lib -L lib -g/tb_inc16/runner_cfg="active python runner : true,enabled_test_cases : ,output path : /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/vunit_out/test_output/lib.tb_inc16.all_2eeb55b34fbd7b5d1c8fa04094fa8e04485ace6a/,tb path : /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/,use_color : true" 
+# Start time: 22:55:57 on Mar 23,2022
+# ** Warning: Design size of 21826 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# Break in Subprogram stop at /home/borg/.local/lib/python3.8/site-packages/vunit/vhdl/core/src/stop_body_2008p.vhd line 13
+# Stopped at /home/borg/.local/lib/python3.8/site-packages/vunit/vhdl/core/src/stop_body_2008p.vhd line 13
+# End time: 22:55:57 on Mar 23,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vsim -modelsimini /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/vunit_out/modelsim/modelsim.ini -wlf /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/vunit_out/test_output/lib.tb_alu.all_776e1fb2296393bd00b7230172cd9214b3490146/modelsim/vsim.wlf -quiet -t ps -onfinish stop lib.tb_alu(tb) -L vunit_lib -L lib -g/tb_alu/runner_cfg="active python runner : true,enabled_test_cases : ,output path : /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/vunit_out/test_output/lib.tb_alu.all_776e1fb2296393bd00b7230172cd9214b3490146/,tb path : /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/,use_color : true" 
+# Start time: 22:55:57 on Mar 23,2022
+# ** Warning: Design size of 22437 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# ** Error: Falha em teste: 20
+#    Time: 3900 ps  Iteration: 0  Process: /tb_alu/main File: /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_ALU.vhd
+# Break in Process main at /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_ALU.vhd line 175
+# Stopped at /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_ALU.vhd line 175
+# 
+# Test Run Failed!
+# 
+# Stack trace result from 'tb' command
+#  /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_ALU.vhd 175 return [address 0xf6d4c6ac] Process main
+# 
+# 
+# Surrounding code from 'see' command
+#   170 : 
+#   171 :       -- Teste: 20
+#   172 :       inX <= "0000000000000000"; inY <= "1111111111111111";
+#   173 :       inZX <= '0'; inNX <= '1'; inZY <= '0'; inNY <= '1'; inF <= "10"; inNO <= '1';
+#   174 :       wait for 200 ps;
+# ->175 :       assert(outZR = '0' and outNG = '1' and outSaida= "1111111111111111")  report "Falha em teste: 20" severity error;
+#   176 : 
+#   177 :       -- -- Teste: 21
+#   178 :       -- inX <= "0000000000000000"; inY <= "1111111111111111";
+#   179 :       -- inZX <= '0'; inNX <= '1'; inZY <= '0'; inNY <= '1'; inF <= "10"; inNO <= '1';
+# 
+# End time: 22:55:57 on Mar 23,2022, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 1
