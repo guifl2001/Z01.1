@@ -10,22 +10,22 @@ z2
 cModel Technology
 Z0 d/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica
 Eadd16
-Z1 w1648057573
+Z1 w1648211314
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 54
+!i122 133
 R0
 Z4 8/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/src/Add16.vhd
 Z5 F/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/src/Add16.vhd
 l0
 Z6 L11 1
-V^@FJVKXm8?U0L69OkeYXZ1
-!s100 SiSIIDRe2L<Y`4Mn=<Q<i1
+V7Y0WXdX:Kj_CaWno<T3aX0
+!s100 Hzk3mbE1ESPIV_Z1lc45D1
 Z7 OV;C;2020.1;71
 33
-Z8 !s110 1648057577
+Z8 !s110 1648211332
 !i10b 1
-Z9 !s108 1648057577.000000
+Z9 !s108 1648211332.000000
 Z10 !s90 -quiet|-modelsimini|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/src/Add16.vhd|
 Z11 !s107 /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/src/Add16.vhd|
 !i113 1
@@ -34,12 +34,12 @@ Z13 tExplicit 1 CvgOpt 0
 Artl
 R2
 R3
-DEx4 work 5 add16 0 22 ^@FJVKXm8?U0L69OkeYXZ1
-!i122 54
-l33
-L19 146
-V_LNZd6fV0mLZH`GfJNAk43
-!s100 BATi0e;Y:So[iic64lBV=0
+DEx4 work 5 add16 0 22 7Y0WXdX:Kj_CaWno<T3aX0
+!i122 133
+l34
+L20 146
+VZIKeiYNYVRzH[nfXEmWjD2
+!s100 YMhSWgizAe8g1Ra_I5>Z_3
 R7
 33
 R8
@@ -51,22 +51,22 @@ R11
 R12
 R13
 Ealu
-Z14 w1648086496
+Z14 w1648210205
 R2
 R3
-!i122 83
+!i122 113
 R0
 Z15 8/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/src/ALU.vhd
 Z16 F/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/src/ALU.vhd
 l0
 L29 1
-VH]oKb_g25Y:Wgz218BQQ]2
-!s100 neFLKMGSVl@?O[M<dB3km1
+Vkn@NBdDYJX^ZTELJ>5EgG0
+!s100 ?d3@iZCJH]aBMN@FD9G5k3
 R7
 33
-Z17 !s110 1648086498
+Z17 !s110 1648210207
 !i10b 1
-Z18 !s108 1648086498.000000
+Z18 !s108 1648210207.000000
 Z19 !s90 -quiet|-modelsimini|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/src/ALU.vhd|
 Z20 !s107 /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/src/ALU.vhd|
 !i113 1
@@ -75,12 +75,12 @@ R13
 Artl
 R2
 R3
-DEx4 work 3 alu 0 22 H]oKb_g25Y:Wgz218BQQ]2
-!i122 83
-l107
-L44 90
-V>RC:54K`V3`XF0P:]eHOZ1
-!s100 9kG_XnH]T2nzGecDO@XKk2
+DEx4 work 3 alu 0 22 kn@NBdDYJX^ZTELJ>5EgG0
+!i122 113
+l111
+L45 94
+VZFUAcC4cZOC]F;fXBPm662
+!s100 R5OKPb6<BHma73cYgBE1h1
 R7
 33
 R17
@@ -1166,24 +1166,24 @@ R157
 R12
 R13
 Esevenseg
-R41
+Z158 w1648208293
 R2
 R3
-!i122 9
+!i122 114
 R0
-Z158 8/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/B-LogicaCombinacional/src/sevenSeg.vhd
-Z159 F/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/B-LogicaCombinacional/src/sevenSeg.vhd
+Z159 8/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/B-LogicaCombinacional/src/sevenSeg.vhd
+Z160 F/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/B-LogicaCombinacional/src/sevenSeg.vhd
 l0
 L4 1
 VgdITb;WTH[5cZbCd[CR:E0
 !s100 XWCP4A?:A0m34fY00Z:oS0
 R7
 33
-R44
+R17
 !i10b 1
-R45
-Z160 !s90 -quiet|-modelsimini|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/B-LogicaCombinacional/src/sevenSeg.vhd|
-Z161 !s107 /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/B-LogicaCombinacional/src/sevenSeg.vhd|
+R18
+Z161 !s90 -quiet|-modelsimini|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/B-LogicaCombinacional/src/sevenSeg.vhd|
+Z162 !s107 /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/B-LogicaCombinacional/src/sevenSeg.vhd|
 !i113 1
 R12
 R13
@@ -1191,84 +1191,82 @@ Aarch
 R2
 R3
 DEx4 work 8 sevenseg 0 22 gdITb;WTH[5cZbCd[CR:E0
-!i122 9
+!i122 114
 l11
 L10 19
-V:@7nZ;XlKDbOXQ5B>>OSU3
-!s100 im6SMzcgj0KA?L8b`V>hX0
+Vze4n0U9U511B<:@6iaa[z3
+!s100 HDejW5hjE<^_BV874ITKE0
 R7
 33
-R44
+R17
 !i10b 1
-R45
-R160
+R18
 R161
+R162
 !i113 1
 R12
 R13
 Etb_add16
-R41
-Z162 D^#x9 vunit_lib 13 vunit_context 0 22 5PF4h;N3nzRfAo898Q8WS3
-Z163 DPx9 vunit_lib 18 run_deprecated_pkg 0 22 06HHNn=l0Y?PoSLo8^<h00
-Z164 DPx9 vunit_lib 10 runner_pkg 0 22 NQlg?N:7cfzSYD?FX_C9W0
-Z165 DPx9 vunit_lib 7 run_pkg 0 22 L;71H6TCjU4gL1AJPm_Vd0
-Z166 DPx9 vunit_lib 13 run_types_pkg 0 22 ZfDWW?_fEaQBz>VkefFUV2
-Z167 DPx9 vunit_lib 20 check_deprecated_pkg 0 22 Y>TVz>[kI8XoP@P02gCOJ2
-Z168 DPx9 vunit_lib 9 check_pkg 0 22 k_?TDGU?=n?1Z0oahO>zF0
-Z169 DPx9 vunit_lib 11 checker_pkg 0 22 E?dhhcE;9VWnHLW[lW4`Y1
-Z170 DPx9 vunit_lib 8 stop_pkg 0 22 UjKiHFdPQ97>_>m`nM3cg3
-Z171 DPx9 vunit_lib 8 core_pkg 0 22 0M7EG>QDghVT?B78KOYPn0
-Z172 DPx9 vunit_lib 18 log_deprecated_pkg 0 22 Q7[lfBh_WC:ca^W64YP1U2
-Z173 DPx9 vunit_lib 9 print_pkg 0 22 z3A9G[B4JdMci]Ub;PK=S3
-Z174 DPx9 vunit_lib 4 path 0 22 ]@TR:IFM`TWfiVL<ZjY=I3
-Z175 DPx9 vunit_lib 15 log_handler_pkg 0 22 4LC?iW3FIdm8J@]^l:Fa_0
-Z176 DPx9 vunit_lib 8 ansi_pkg 0 22 h9cG]NHf=IYSX>SV5U_OM1
-Z177 DPx9 vunit_lib 14 log_levels_pkg 0 22 jGUFnEUH1mU?HKm3YRPGj3
-Z178 DPx9 vunit_lib 10 logger_pkg 0 22 Jj3MC9=bR4jQbFA1jSDXY2
-Z179 DPx9 vunit_lib 10 dictionary 0 22 _W8>On_YoEFWEDP8TQC@R0
-Z180 DPx9 vunit_lib 10 string_ops 0 22 >6lVd?dSYVCeeU;1?_=bg2
-Z181 D^#x9 vunit_lib 18 data_types_context 0 22 [Ik[<YbW8Ag;h5P``aP2g3
-Z182 DPx9 vunit_lib 8 dict_pkg 0 22 _EQKR[P[ibBW^<0mzPejD2
-Z183 DPx9 vunit_lib 19 byte_vector_ptr_pkg 0 22 nMb7G]QlQkbCia?ecQlOB1
-Z184 DPx9 vunit_lib 19 string_ptr_pool_pkg 0 22 ;oGa_UEi8nVncYkDRR_Aj1
-Z185 DPx9 vunit_lib 14 queue_pool_pkg 0 22 W_@1eWPT4E>cBF2g>m`PC0
-Z186 DPx9 vunit_lib 17 integer_array_pkg 0 22 o:H2ie>cVB<O<8]@gJG;:3
-Z187 DPx9 vunit_lib 19 external_string_pkg 0 22 iE_JL@S7G[ScLPziLPH3]3
-Z188 DPx9 vunit_lib 14 string_ptr_pkg 0 22 n[AzFb_A:6S@HQFZYcL]h0
-Z189 DPx9 vunit_lib 9 queue_pkg 0 22 CMi_fVS`R;@j5e>onMNln3
-Z190 DPx9 vunit_lib 27 integer_vector_ptr_pool_pkg 0 22 FX=7VbM]W@D7RN`^3N8aJ3
-Z191 DPx9 vunit_lib 17 codec_builder_pkg 0 22 lMzaQB]AGo[9c?7g60J_93
+Z163 w1648211298
+Z164 D^#x9 vunit_lib 13 vunit_context 0 22 5PF4h;N3nzRfAo898Q8WS3
+Z165 DPx9 vunit_lib 18 run_deprecated_pkg 0 22 06HHNn=l0Y?PoSLo8^<h00
+Z166 DPx9 vunit_lib 10 runner_pkg 0 22 NQlg?N:7cfzSYD?FX_C9W0
+Z167 DPx9 vunit_lib 7 run_pkg 0 22 L;71H6TCjU4gL1AJPm_Vd0
+Z168 DPx9 vunit_lib 13 run_types_pkg 0 22 ZfDWW?_fEaQBz>VkefFUV2
+Z169 DPx9 vunit_lib 20 check_deprecated_pkg 0 22 Y>TVz>[kI8XoP@P02gCOJ2
+Z170 DPx9 vunit_lib 9 check_pkg 0 22 k_?TDGU?=n?1Z0oahO>zF0
+Z171 DPx9 vunit_lib 11 checker_pkg 0 22 E?dhhcE;9VWnHLW[lW4`Y1
+Z172 DPx9 vunit_lib 8 stop_pkg 0 22 UjKiHFdPQ97>_>m`nM3cg3
+Z173 DPx9 vunit_lib 8 core_pkg 0 22 0M7EG>QDghVT?B78KOYPn0
+Z174 DPx9 vunit_lib 18 log_deprecated_pkg 0 22 Q7[lfBh_WC:ca^W64YP1U2
+Z175 DPx9 vunit_lib 9 print_pkg 0 22 z3A9G[B4JdMci]Ub;PK=S3
+Z176 DPx9 vunit_lib 4 path 0 22 ]@TR:IFM`TWfiVL<ZjY=I3
+Z177 DPx9 vunit_lib 15 log_handler_pkg 0 22 4LC?iW3FIdm8J@]^l:Fa_0
+Z178 DPx9 vunit_lib 8 ansi_pkg 0 22 h9cG]NHf=IYSX>SV5U_OM1
+Z179 DPx9 vunit_lib 14 log_levels_pkg 0 22 jGUFnEUH1mU?HKm3YRPGj3
+Z180 DPx9 vunit_lib 10 logger_pkg 0 22 Jj3MC9=bR4jQbFA1jSDXY2
+Z181 DPx9 vunit_lib 10 dictionary 0 22 _W8>On_YoEFWEDP8TQC@R0
+Z182 DPx9 vunit_lib 10 string_ops 0 22 >6lVd?dSYVCeeU;1?_=bg2
+Z183 D^#x9 vunit_lib 18 data_types_context 0 22 [Ik[<YbW8Ag;h5P``aP2g3
+Z184 DPx9 vunit_lib 8 dict_pkg 0 22 _EQKR[P[ibBW^<0mzPejD2
+Z185 DPx9 vunit_lib 19 byte_vector_ptr_pkg 0 22 nMb7G]QlQkbCia?ecQlOB1
+Z186 DPx9 vunit_lib 19 string_ptr_pool_pkg 0 22 ;oGa_UEi8nVncYkDRR_Aj1
+Z187 DPx9 vunit_lib 14 queue_pool_pkg 0 22 W_@1eWPT4E>cBF2g>m`PC0
+Z188 DPx9 vunit_lib 17 integer_array_pkg 0 22 o:H2ie>cVB<O<8]@gJG;:3
+Z189 DPx9 vunit_lib 19 external_string_pkg 0 22 iE_JL@S7G[ScLPziLPH3]3
+Z190 DPx9 vunit_lib 14 string_ptr_pkg 0 22 n[AzFb_A:6S@HQFZYcL]h0
+Z191 DPx9 vunit_lib 9 queue_pkg 0 22 CMi_fVS`R;@j5e>onMNln3
+Z192 DPx9 vunit_lib 27 integer_vector_ptr_pool_pkg 0 22 FX=7VbM]W@D7RN`^3N8aJ3
+Z193 DPx9 vunit_lib 17 codec_builder_pkg 0 22 lMzaQB]AGo[9c?7g60J_93
 R29
-Z192 DPx4 ieee 11 numeric_bit 0 22 G2;d`f^X6V]cQEn8_38:i1
-Z193 DPx4 ieee 9 math_real 0 22 gNk<PdFJ<XNPcfef`f?Z81
-Z194 DPx4 ieee 12 math_complex 0 22 lndMRF4<kJnT_9]@:30S@3
-Z195 DPx9 vunit_lib 9 codec_pkg 0 22 VE]>YKnj@eiUJ<U1YSEXb3
-Z196 DPx9 vunit_lib 27 external_integer_vector_pkg 0 22 hl?S7F7[zeX8D09=mXj_W2
-Z197 DPx9 vunit_lib 22 integer_vector_ptr_pkg 0 22 dQHde;mb=n>VUWALE0?M33
-Z198 DPx9 vunit_lib 9 types_pkg 0 22 8X1EBI95Q8hI=Vi3D9DP;0
+Z194 DPx4 ieee 11 numeric_bit 0 22 G2;d`f^X6V]cQEn8_38:i1
+Z195 DPx4 ieee 9 math_real 0 22 gNk<PdFJ<XNPcfef`f?Z81
+Z196 DPx4 ieee 12 math_complex 0 22 lndMRF4<kJnT_9]@:30S@3
+Z197 DPx9 vunit_lib 9 codec_pkg 0 22 VE]>YKnj@eiUJ<U1YSEXb3
+Z198 DPx9 vunit_lib 27 external_integer_vector_pkg 0 22 hl?S7F7[zeX8D09=mXj_W2
+Z199 DPx9 vunit_lib 22 integer_vector_ptr_pkg 0 22 dQHde;mb=n>VUWALE0?M33
+Z200 DPx9 vunit_lib 9 types_pkg 0 22 8X1EBI95Q8hI=Vi3D9DP;0
 R2
 R3
-!i122 38
+!i122 132
 R0
-Z199 8/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_Add16.vhd
-Z200 F/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_Add16.vhd
+Z201 8/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_Add16.vhd
+Z202 F/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_Add16.vhd
 l0
 R58
 VhgNGb2oQ5c1006Y1zQTmz1
 !s100 77RA^4iTgKfKX]UO[D^BS0
 R7
 33
-Z201 !s110 1648056361
+Z203 !s110 1648211303
 !i10b 1
-Z202 !s108 1648056361.000000
-Z203 !s90 -quiet|-modelsimini|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_Add16.vhd|
-Z204 !s107 /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_Add16.vhd|
+Z204 !s108 1648211303.000000
+Z205 !s90 -quiet|-modelsimini|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_Add16.vhd|
+Z206 !s107 /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_Add16.vhd|
 !i113 1
 R12
 R13
 Atb
-R162
-R163
 R164
 R165
 R166
@@ -1297,36 +1295,36 @@ R188
 R189
 R190
 R191
-R29
 R192
 R193
+R29
 R194
 R195
 R196
 R197
 R198
+R199
+R200
 R2
 R3
 DEx4 work 8 tb_add16 0 22 hgNGb2oQ5c1006Y1zQTmz1
-!i122 38
-l28
-L16 54
-VFYl>djzSJj06iZNgkmO?F3
-!s100 @fSmgf?fTP^V=^_e?;XFJ1
+!i122 132
+l30
+L16 56
+V@7zjEz;?;NLh?E1:2BPz43
+!s100 ?E1]<[Kh>BWdGE_D]=jj51
 R7
 33
-R201
-!i10b 1
-R202
 R203
+!i10b 1
 R204
+R205
+R206
 !i113 1
 R12
 R13
 Etb_alu
-Z205 w1648087269
-R162
-R163
+Z207 w1648211633
 R164
 R165
 R166
@@ -1355,37 +1353,37 @@ R188
 R189
 R190
 R191
-R29
 R192
 R193
+R29
 R194
 R195
 R196
 R197
 R198
+R199
+R200
 R2
 R3
-!i122 95
+!i122 139
 R0
-Z206 8/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_ALU.vhd
-Z207 F/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_ALU.vhd
+Z208 8/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_ALU.vhd
+Z209 F/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_ALU.vhd
 l0
 R58
 V<BYgR99dMme>VMNA?@iWh2
 !s100 =iE_?APIHc?H1k29OSzE61
 R7
 33
-Z208 !s110 1648087270
+Z210 !s110 1648211642
 !i10b 1
-Z209 !s108 1648087270.000000
-Z210 !s90 -quiet|-modelsimini|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_ALU.vhd|
-Z211 !s107 /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_ALU.vhd|
+Z211 !s108 1648211642.000000
+Z212 !s90 -quiet|-modelsimini|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_ALU.vhd|
+Z213 !s107 /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_ALU.vhd|
 !i113 1
 R12
 R13
 Atb
-R162
-R163
 R164
 R165
 R166
@@ -1414,36 +1412,36 @@ R188
 R189
 R190
 R191
-R29
 R192
 R193
+R29
 R194
 R195
 R196
 R197
 R198
+R199
+R200
 R2
 R3
-Z212 DEx4 work 6 tb_alu 0 22 <BYgR99dMme>VMNA?@iWh2
-!i122 95
-l38
-Z213 L16 195
-VZZO1dBF@^KAT3CnKNW9B?1
-!s100 SGd2G=3AcCEkNmWLNmh[:1
+Z214 DEx4 work 6 tb_alu 0 22 <BYgR99dMme>VMNA?@iWh2
+!i122 139
+l40
+Z215 L16 198
+VoJ_I:ZEh8kDh@JYO2a^C41
+!s100 g_Wj?lfUe5i7LRFZi04SM0
 R7
 33
-R208
-!i10b 1
-R209
 R210
+!i10b 1
 R211
+R212
+R213
 !i113 1
 R12
 R13
 Etb_comparador16
 R41
-R162
-R163
 R164
 R165
 R166
@@ -1472,37 +1470,37 @@ R188
 R189
 R190
 R191
-R29
 R192
 R193
+R29
 R194
 R195
 R196
 R197
 R198
+R199
+R200
 R2
 R3
 !i122 34
 R0
-Z214 8/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_comparador16.vhd
-Z215 F/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_comparador16.vhd
+Z216 8/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_comparador16.vhd
+Z217 F/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_comparador16.vhd
 l0
 R58
 VVUDPfQ]`C`2AhKW>>IJ6o1
 !s100 I_g]JMk`mXQEHH=P@1gOo2
 R7
 33
-R201
+Z218 !s110 1648056361
 !i10b 1
-R202
-Z216 !s90 -quiet|-modelsimini|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_comparador16.vhd|
-Z217 !s107 /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_comparador16.vhd|
+Z219 !s108 1648056361.000000
+Z220 !s90 -quiet|-modelsimini|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_comparador16.vhd|
+Z221 !s107 /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_comparador16.vhd|
 !i113 1
 R12
 R13
 Atb
-R162
-R163
 R164
 R165
 R166
@@ -1531,14 +1529,16 @@ R188
 R189
 R190
 R191
-R29
 R192
 R193
+R29
 R194
 R195
 R196
 R197
 R198
+R199
+R200
 R2
 R3
 DEx4 work 15 tb_comparador16 0 22 VUDPfQ]`C`2AhKW>>IJ6o1
@@ -1549,18 +1549,16 @@ VXUgehJe1?XREdG=IlaF_D2
 !s100 cVREJcW;_N;b>`<29L:[10
 R7
 33
-R201
+R218
 !i10b 1
-R202
-R216
-R217
+R219
+R220
+R221
 !i113 1
 R12
 R13
 Etb_fulladder
 R41
-R162
-R163
 R164
 R165
 R166
@@ -1589,37 +1587,37 @@ R188
 R189
 R190
 R191
-R29
 R192
 R193
+R29
 R194
 R195
 R196
 R197
 R198
+R199
+R200
 R2
 R3
 !i122 37
 R0
-Z218 8/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_FullAdder.vhd
-Z219 F/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_FullAdder.vhd
+Z222 8/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_FullAdder.vhd
+Z223 F/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_FullAdder.vhd
 l0
 R58
 VIHgOARFR?[o8i4cV3E^K_0
 !s100 B?H4Yi6N6]id;0kbZFZH?1
 R7
 33
-R201
+R218
 !i10b 1
-R202
-Z220 !s90 -quiet|-modelsimini|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_FullAdder.vhd|
-Z221 !s107 /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_FullAdder.vhd|
+R219
+Z224 !s90 -quiet|-modelsimini|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_FullAdder.vhd|
+Z225 !s107 /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_FullAdder.vhd|
 !i113 1
 R12
 R13
 Atb
-R162
-R163
 R164
 R165
 R166
@@ -1648,14 +1646,16 @@ R188
 R189
 R190
 R191
-R29
 R192
 R193
+R29
 R194
 R195
 R196
 R197
 R198
+R199
+R200
 R2
 R3
 DEx4 work 12 tb_fulladder 0 22 IHgOARFR?[o8i4cV3E^K_0
@@ -1666,18 +1666,16 @@ Vcn@33bnl<Y@IE[DI0?CcC3
 !s100 Xe2EZ6YDc`AV0HAMinEgY0
 R7
 33
-R201
+R218
 !i10b 1
-R202
-R220
-R221
+R219
+R224
+R225
 !i113 1
 R12
 R13
 Etb_halfadder
-Z222 w1648079944
-R162
-R163
+Z226 w1648079944
 R164
 R165
 R166
@@ -1706,20 +1704,22 @@ R188
 R189
 R190
 R191
-R29
 R192
 R193
+R29
 R194
 R195
 R196
 R197
 R198
+R199
+R200
 R2
 R3
 !i122 71
 R0
-Z223 8/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_HalfAdder.vhd
-Z224 F/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_HalfAdder.vhd
+Z227 8/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_HalfAdder.vhd
+Z228 F/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_HalfAdder.vhd
 l0
 R58
 VEL1]mXj4HPzTD>UiaJ?dR1
@@ -1729,14 +1729,12 @@ R7
 R24
 !i10b 1
 R25
-Z225 !s90 -quiet|-modelsimini|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_HalfAdder.vhd|
-Z226 !s107 /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_HalfAdder.vhd|
+Z229 !s90 -quiet|-modelsimini|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_HalfAdder.vhd|
+Z230 !s107 /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_HalfAdder.vhd|
 !i113 1
 R12
 R13
 Atb
-R162
-R163
 R164
 R165
 R166
@@ -1765,14 +1763,16 @@ R188
 R189
 R190
 R191
-R29
 R192
 R193
+R29
 R194
 R195
 R196
 R197
 R198
+R199
+R200
 R2
 R3
 DEx4 work 12 tb_halfadder 0 22 EL1]mXj4HPzTD>UiaJ?dR1
@@ -1786,15 +1786,13 @@ R7
 R24
 !i10b 1
 R25
-R225
-R226
+R229
+R230
 !i113 1
 R12
 R13
 Etb_inc16
 R41
-R162
-R163
 R164
 R165
 R166
@@ -1823,37 +1821,37 @@ R188
 R189
 R190
 R191
-R29
 R192
 R193
+R29
 R194
 R195
 R196
 R197
 R198
+R199
+R200
 R2
 R3
 !i122 35
 R0
-Z227 8/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_Inc16.vhd
-Z228 F/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_Inc16.vhd
+Z231 8/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_Inc16.vhd
+Z232 F/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_Inc16.vhd
 l0
 R58
 VM8Bj`IbE5a<bQ1Q4?o;AQ3
 !s100 ?AK^a0iYVQ[RS9`Mcj7E]0
 R7
 33
-R201
+R218
 !i10b 1
-R202
-Z229 !s90 -quiet|-modelsimini|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_Inc16.vhd|
-Z230 !s107 /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_Inc16.vhd|
+R219
+Z233 !s90 -quiet|-modelsimini|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_Inc16.vhd|
+Z234 !s107 /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_Inc16.vhd|
 !i113 1
 R12
 R13
 Atb
-R162
-R163
 R164
 R165
 R166
@@ -1882,14 +1880,16 @@ R188
 R189
 R190
 R191
-R29
 R192
 R193
+R29
 R194
 R195
 R196
 R197
 R198
+R199
+R200
 R2
 R3
 DEx4 work 8 tb_inc16 0 22 M8Bj`IbE5a<bQ1Q4?o;AQ3
@@ -1900,18 +1900,16 @@ VWB>:3=9WB[=SbAZBf;>:31
 !s100 Obn9H8cJenTZ?5RZ8Sha?1
 R7
 33
-R201
+R218
 !i10b 1
-R202
-R229
-R230
+R219
+R233
+R234
 !i113 1
 R12
 R13
 Etb_inversor16
 R41
-R162
-R163
 R164
 R165
 R166
@@ -1940,37 +1938,37 @@ R188
 R189
 R190
 R191
-R29
 R192
 R193
+R29
 R194
 R195
 R196
 R197
 R198
+R199
+R200
 R2
 R3
 !i122 33
 R0
-Z231 8/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_inversor16.vhd
-Z232 F/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_inversor16.vhd
+Z235 8/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_inversor16.vhd
+Z236 F/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_inversor16.vhd
 l0
 R58
 V3V2MO1R]UfbC[QV8MY3>P0
 !s100 PW[am_O=GGFJ3T9NKU>0`3
 R7
 33
-R201
+R218
 !i10b 1
-R202
-Z233 !s90 -quiet|-modelsimini|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_inversor16.vhd|
-Z234 !s107 /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_inversor16.vhd|
+R219
+Z237 !s90 -quiet|-modelsimini|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_inversor16.vhd|
+Z238 !s107 /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_inversor16.vhd|
 !i113 1
 R12
 R13
 Atb
-R162
-R163
 R164
 R165
 R166
@@ -1999,14 +1997,16 @@ R188
 R189
 R190
 R191
-R29
 R192
 R193
+R29
 R194
 R195
 R196
 R197
 R198
+R199
+R200
 R2
 R3
 DEx4 work 13 tb_inversor16 0 22 3V2MO1R]UfbC[QV8MY3>P0
@@ -2017,18 +2017,16 @@ VAbJFbnY:ZoHJSXZdoBbkg3
 !s100 KF4ndaa6P<l`^XgJcSa?o3
 R7
 33
-R201
+R218
 !i10b 1
-R202
-R233
-R234
+R219
+R237
+R238
 !i113 1
 R12
 R13
 Etb_zerador16
 R41
-R162
-R163
 R164
 R165
 R166
@@ -2057,37 +2055,37 @@ R188
 R189
 R190
 R191
-R29
 R192
 R193
+R29
 R194
 R195
 R196
 R197
 R198
+R199
+R200
 R2
 R3
 !i122 32
 R0
-Z235 8/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_zerador16.vhd
-Z236 F/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_zerador16.vhd
+Z239 8/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_zerador16.vhd
+Z240 F/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_zerador16.vhd
 l0
 R58
 V18^dU4AXcDO7HF<NSj1023
 !s100 CjK3oICe3bGE?_EmQ>=oJ0
 R7
 33
-R201
+R218
 !i10b 1
-R202
-Z237 !s90 -quiet|-modelsimini|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_zerador16.vhd|
-Z238 !s107 /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_zerador16.vhd|
+R219
+Z241 !s90 -quiet|-modelsimini|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_zerador16.vhd|
+Z242 !s107 /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_zerador16.vhd|
 !i113 1
 R12
 R13
 Atb
-R162
-R163
 R164
 R165
 R166
@@ -2116,14 +2114,16 @@ R188
 R189
 R190
 R191
-R29
 R192
 R193
+R29
 R194
 R195
 R196
 R197
 R198
+R199
+R200
 R2
 R3
 DEx4 work 12 tb_zerador16 0 22 18^dU4AXcDO7HF<NSj1023
@@ -2134,34 +2134,34 @@ VB1cHXP6z`@3hL;];j;9Q12
 !s100 >=E4LZ7m8DUCVOGUeRoEP2
 R7
 33
-R201
+R218
 !i10b 1
-R202
-R237
-R238
+R219
+R241
+R242
 !i113 1
 R12
 R13
 Etoplevel
-Z239 w1648082702
+Z243 w1648082702
 R29
 R2
 R3
-!i122 64
+!i122 115
 R0
-Z240 8/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/B-LogicaCombinacional/src/TopLevel.vhd
-Z241 F/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/B-LogicaCombinacional/src/TopLevel.vhd
+Z244 8/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/B-LogicaCombinacional/src/TopLevel.vhd
+Z245 F/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/B-LogicaCombinacional/src/TopLevel.vhd
 l0
 L20 1
 V[6XZW8V:?;<9^FCAQC9AK2
 !s100 04mn3hH7ia92Oa>2N0[551
 R7
 33
-R24
+R17
 !i10b 1
-R25
-Z242 !s90 -quiet|-modelsimini|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/B-LogicaCombinacional/src/TopLevel.vhd|
-Z243 !s107 /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/B-LogicaCombinacional/src/TopLevel.vhd|
+R18
+Z246 !s90 -quiet|-modelsimini|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/B-LogicaCombinacional/src/TopLevel.vhd|
+Z247 !s107 /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/B-LogicaCombinacional/src/TopLevel.vhd|
 !i113 1
 R12
 R13
@@ -2170,40 +2170,40 @@ R29
 R2
 R3
 DEx4 work 8 toplevel 0 22 [6XZW8V:?;<9^FCAQC9AK2
-!i122 64
+!i122 115
 l48
 L35 60
 VXafU6hOOZLci^Ygo4<g]@1
 !s100 SE;HMz>96n9zIH_SlMig]2
 R7
 33
-R24
+R17
 !i10b 1
-R25
-R242
-R243
+R18
+R246
+R247
 !i113 1
 R12
 R13
 Exor16
-Z244 w1648085468
+Z248 w1648085468
 R2
 R3
 !i122 78
 R0
-Z245 8/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/src/xor16.vhd
-Z246 F/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/src/xor16.vhd
+Z249 8/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/src/xor16.vhd
+Z250 F/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/src/xor16.vhd
 l0
 L8 1
 VOmKZiPfm^`D?mX;k_@8l`3
 !s100 I4;4kjJSWeWB29F`?7YX?2
 R7
 33
-Z247 !s110 1648085484
+Z251 !s110 1648085484
 !i10b 1
-Z248 !s108 1648085484.000000
-Z249 !s90 -quiet|-modelsimini|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/src/xor16.vhd|
-Z250 !s107 /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/src/xor16.vhd|
+Z252 !s108 1648085484.000000
+Z253 !s90 -quiet|-modelsimini|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/src/xor16.vhd|
+Z254 !s107 /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/src/xor16.vhd|
 !i113 1
 R12
 R13
@@ -2218,33 +2218,33 @@ V>6U6MOeAY[zeB42d;]RLF0
 !s100 _ZAzFh3C3@BjR=z9KnCSZ2
 R7
 33
-R247
+R251
 !i10b 1
-R248
-R249
-R250
+R252
+R253
+R254
 !i113 1
 R12
 R13
 Ezerador16
-Z251 w1648085471
+Z255 w1648085471
 R2
 R3
 !i122 77
 R0
-Z252 8/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/src/zerador16.vhd
-Z253 F/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/src/zerador16.vhd
+Z256 8/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/src/zerador16.vhd
+Z257 F/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/src/zerador16.vhd
 l0
 L8 1
 V6P3IMCogIFclGlEB2@YRY1
 !s100 mlJ^;fDjiOi>A>dYoJMdF0
 R7
 33
-R247
+R251
 !i10b 1
-R248
-Z254 !s90 -quiet|-modelsimini|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/src/zerador16.vhd|
-Z255 !s107 /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/src/zerador16.vhd|
+R252
+Z258 !s90 -quiet|-modelsimini|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/src/zerador16.vhd|
+Z259 !s107 /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/src/zerador16.vhd|
 !i113 1
 R12
 R13
@@ -2259,11 +2259,11 @@ VgeJ8P5ieMk`WS2a[3fEBa2
 !s100 EYS4o8b^QL5LC1T:X>jJG2
 R7
 33
-R247
+R251
 !i10b 1
-R248
-R254
-R255
+R252
+R258
+R259
 !i113 1
 R12
 R13

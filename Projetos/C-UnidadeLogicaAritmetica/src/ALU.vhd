@@ -33,11 +33,12 @@ entity ALU is
 			nx:    in STD_LOGIC;                     -- inverte a entrada x
 			zy:    in STD_LOGIC;                     -- zera a entrada y
 			ny:    in STD_LOGIC;                     -- inverte a entrada y
-			f:     STD_LOGIC_VECTOR(1 downto 0);                     -- se 0 calcula x & y, senão x + y
+			f:     in STD_LOGIC_VECTOR(1 downto 0);  -- se 0 calcula x & y, senão x + y
 			no:    in STD_LOGIC;                     -- inverte o valor da saída
 			zr:    out STD_LOGIC;                    -- setado se saída igual a zero
 			ng:    out STD_LOGIC;                    -- setado se saída é negativa
-			saida: out STD_LOGIC_VECTOR(15 downto 0) -- saída de dados da ALU
+			saida: out STD_LOGIC_VECTOR(15 downto 0); -- saída de dados da ALU
+			car:   out STD_LOGIC
 	);
 end entity;
 
@@ -61,11 +62,12 @@ architecture  rtl OF alu is
 	end component;
 
 	component Add16 is
-		port(
-			a   :  in STD_LOGIC_VECTOR(15 downto 0);
-			b   :  in STD_LOGIC_VECTOR(15 downto 0);
-			q   : out STD_LOGIC_VECTOR(15 downto 0)
-		);
+	port(
+		a   :  in STD_LOGIC_VECTOR(15 downto 0);
+		b   :  in STD_LOGIC_VECTOR(15 downto 0);
+		q   : out STD_LOGIC_VECTOR(15 downto 0);
+    	car : out STD_LOGIC
+	);
 	end component;
 
 	component And16 is
@@ -102,7 +104,9 @@ architecture  rtl OF alu is
 			);
 	  end component;
 
-   SIGNAL zxout,zyout,nxout,nyout,andout,adderout, xorout,muxout,precomp: std_logic_vector(15 downto 0);
+   SIGNAL zxout,zyout,nxout,nyout,andout,adderout, xorout, muxout, precomp: std_logic_vector(15 downto 0);
+   SIGNAL sobra: STD_LOGIC:= '0';
+
 
 begin
   -- Implementação vem aqui!
@@ -113,7 +117,7 @@ begin
   y_inverte: inversor16 port map(z => ny, a => zyout, y => nyout);
 
   XandY: And16 port map(a => nxout, b => nyout, q => andout);
-  XaddY: Add16 port map(a => nxout, b => nyout, q => adderout);
+  XaddY: Add16 port map(a => nxout, b => nyout, q => adderout, car => sobra);
   XxorY: xor16 port map(a => nxout, b => nyout, y => xorout);
 
   Mux: Mux4Way16 port map(
@@ -129,5 +133,6 @@ begin
   Comparador: comparador16 port map(a => precomp, zr => zr, ng => ng);
 
   saida <= precomp;
+  car <= sobra;
 
 end architecture;

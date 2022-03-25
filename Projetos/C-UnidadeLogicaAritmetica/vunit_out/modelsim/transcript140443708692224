@@ -1,0 +1,30 @@
+# do /home/borg/.local/lib/python3.8/site-packages/vunit/sim_if/tcl_read_eval_loop.tcl
+# vsim -modelsimini /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/vunit_out/modelsim/modelsim.ini -wlf /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/vunit_out/test_output/lib.tb_add16.all_a8ad0313227e6e4cf7e1113b280dcedad766e677/modelsim/vsim.wlf -quiet -t ps -onfinish stop lib.tb_add16(tb) -L vunit_lib -L lib -g/tb_add16/runner_cfg="active python runner : true,enabled_test_cases : ,output path : /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/vunit_out/test_output/lib.tb_add16.all_a8ad0313227e6e4cf7e1113b280dcedad766e677/,tb path : /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/,use_color : true" 
+# Start time: 09:26:18 on Mar 25,2022
+# ** Warning: Design size of 21803 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# ** Error: Falha em teste: 1
+#    Time: 200 ps  Iteration: 0  Process: /tb_add16/main File: /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_Add16.vhd
+# Break in Process main at /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_Add16.vhd line 41
+# Stopped at /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_Add16.vhd line 41
+# 
+# Test Run Failed!
+# 
+# Stack trace result from 'tb' command
+#  /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_Add16.vhd 41 return [address 0xf6d49667] Process main
+# 
+# 
+# Surrounding code from 'see' command
+#   36 :     test_runner_setup(runner, runner_cfg);
+#   37 : 
+#   38 :       -- Teste: 1
+#   39 :       inA <= "0000000000000000"; inB<= "0000000000000001";
+#   40 :       wait for 200 ps;
+# ->41 :       assert(outCar= '0' and outQ = "0000000000000001")  report "Falha em teste: 1" severity error;
+#   42 : 
+#   43 :       -- -- Teste: 2
+#   44 :       -- inA <= "0000000000000000"; inB<= "1111111111111111";
+#   45 :       -- wait for 200 ps;
+# 
+# End time: 09:26:18 on Mar 25,2022, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 1
