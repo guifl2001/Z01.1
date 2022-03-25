@@ -5,11 +5,16 @@ entity And16 is
 	port ( 
 			a:   in  STD_LOGIC_VECTOR(15 downto 0);
 			b:   in  STD_LOGIC_VECTOR(15 downto 0);
-			q:   out STD_LOGIC_VECTOR(15 downto 0));
+			q:   out STD_LOGIC_VECTOR(16 downto 0));
 end entity;
 
 architecture arch of And16 is
+
+	SIGNAL complemento: STD_LOGIC_VECTOR(16 downto 0);
+
 begin
-	q <= a and b;
+	complemento(15 downto 0) <= a and b;
+	complemento(16) <= '0';
+	q <= complemento;
 
 end architecture;

@@ -18,15 +18,15 @@ architecture tb of tb_Mux4Way16 is
 
   component Mux4Way16 is
     port (
-      a:   in  STD_LOGIC_VECTOR(15 downto 0);
-      b:   in  STD_LOGIC_VECTOR(15 downto 0);
-      c:   in  STD_LOGIC_VECTOR(15 downto 0);
-      d:   in  STD_LOGIC_VECTOR(15 downto 0);
+      a:   in  STD_LOGIC_VECTOR(16 downto 0);
+      b:   in  STD_LOGIC_VECTOR(16 downto 0);
+      c:   in  STD_LOGIC_VECTOR(16 downto 0);
+      d:   in  STD_LOGIC_VECTOR(16 downto 0);
       sel: in  STD_LOGIC_VECTOR(1 downto 0);
-      q:   out STD_LOGIC_VECTOR(15 downto 0));
+      q:   out STD_LOGIC_VECTOR(16 downto 0));
   end component;
 
-  signal inA, inB, inC, inD, outQ : STD_LOGIC_VECTOR(15 downto 0);
+  signal inA, inB, inC, inD, outQ : STD_LOGIC_VECTOR(16 downto 0);
   signal inSel : STD_LOGIC_VECTOR(1 downto 0);
 
   -- Clock
@@ -50,10 +50,10 @@ begin
     test_runner_setup(runner, runner_cfg);
 
     -- Teste: 1
-    inA <= "1111111111111111"; inB <= "0000000000000000"; inC <="0000000000000000"; inD <="0000000000000000"; inSel<= "00";
+    inA <= "11111111111111111"; inB <= "00000000000000000"; inC <="00000000000000000"; inD <="00000000000000000"; inSel<= "00";
     --wait until clk='1';
     wait for 10 ns;
-    assert(outQ = "1111111111111111")  report "Falha em teste: 1" severity error;
+    assert(outQ = "11111111111111111")  report "Falha em teste: 1" severity error;
 
     test_runner_cleanup(runner); -- Simulacao acaba aqui
 

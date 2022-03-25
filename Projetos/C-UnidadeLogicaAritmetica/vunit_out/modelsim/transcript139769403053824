@@ -1,0 +1,32 @@
+# do /home/borg/.local/lib/python3.8/site-packages/vunit/sim_if/tcl_read_eval_loop.tcl
+# vsim -modelsimini /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/vunit_out/modelsim/modelsim.ini -wlf /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/vunit_out/test_output/lib.tb_alu.all_776e1fb2296393bd00b7230172cd9214b3490146/modelsim/vsim.wlf -quiet -t ps -onfinish stop lib.tb_alu(tb) -L vunit_lib -L lib -g/tb_alu/runner_cfg="active python runner : true,enabled_test_cases : ,output path : /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/vunit_out/test_output/lib.tb_alu.all_776e1fb2296393bd00b7230172cd9214b3490146/,tb path : /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/,use_color : true" 
+# Start time: 16:56:18 on Mar 25,2022
+# ** Warning: Design size of 22516 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_alu/mapping/BarrelShifter
+# ** Error: Falha em teste: 16
+#    Time: 3100 ps  Iteration: 0  Process: /tb_alu/main File: /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_ALU.vhd
+# Break in Process main at /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_ALU.vhd line 158
+# Stopped at /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_ALU.vhd line 158
+# 
+# Test Run Failed!
+# 
+# Stack trace result from 'tb' command
+#  /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_ALU.vhd 158 return [address 0xf6d4c370] Process main
+# 
+# 
+# Surrounding code from 'see' command
+#   153 : 
+#   154 :       -- Teste: 16
+#   155 :       inX <= "0000000000000000"; inY <= "1111111111111111";
+#   156 :       inZX <= '0'; inNX <= '1'; inZY <= '0'; inNY <= '0'; inF <= "01"; inNO <= '1'; indir <= '1'; insize <= "01";
+#   157 :       wait for 200 ps;
+# ->158 :       assert(outZR = '1' and outNG = '0' and outSaida= "0000000000000000" and outcar= '0')  report "Falha em teste: 16" severity error;
+#   159 : 
+#   160 :       -- -- Teste: 17
+#   161 :       -- inX <= "0000000000000000"; inY <= "1111111111111111";
+#   162 :       -- inZX <= '0'; inNX <= '0'; inZY <= '0'; inNY <= '1'; inF <= "01"; inNO <= '1'; indir <= '0'; insize <= "01";
+# 
+# End time: 16:56:19 on Mar 25,2022, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 2

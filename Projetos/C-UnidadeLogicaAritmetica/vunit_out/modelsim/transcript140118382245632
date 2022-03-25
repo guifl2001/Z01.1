@@ -1,0 +1,30 @@
+# do /home/borg/.local/lib/python3.8/site-packages/vunit/sim_if/tcl_read_eval_loop.tcl
+# vsim -modelsimini /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/vunit_out/modelsim/modelsim.ini -wlf /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/vunit_out/test_output/lib.tb_add16.all_a8ad0313227e6e4cf7e1113b280dcedad766e677/modelsim/vsim.wlf -quiet -t ps -onfinish stop lib.tb_add16(tb) -L vunit_lib -L lib -g/tb_add16/runner_cfg="active python runner : true,enabled_test_cases : ,output path : /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/vunit_out/test_output/lib.tb_add16.all_a8ad0313227e6e4cf7e1113b280dcedad766e677/,tb path : /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/,use_color : true" 
+# Start time: 15:12:07 on Mar 25,2022
+# ** Warning: Design size of 21837 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# ** Error: Falha em teste: 6
+#    Time: 1400 ps  Iteration: 0  Process: /tb_add16/main File: /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_Add16.vhd
+# Break in Process main at /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_Add16.vhd line 70
+# Stopped at /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_Add16.vhd line 70
+# 
+# Test Run Failed!
+# 
+# Stack trace result from 'tb' command
+#  /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/C-UnidadeLogicaAritmetica/testes/tb_Add16.vhd 70 return [address 0xf6d49d99] Process main
+# 
+# 
+# Surrounding code from 'see' command
+#   65 :       assert(outQ = "01010101010101010")  report "Falha em teste: 6" severity error;
+#   66 : 
+#   67 :       -- Teste: 7
+#   68 :       inA <= "1001001000110100"; inB<= "1001100001110110";
+#   69 :       wait for 200 ps;
+# ->70 :       assert(outQ = "01010101010101010")  report "Falha em teste: 6" severity error;
+#   71 : 
+#   72 :     test_runner_cleanup(runner); -- Simulacao acaba aqui
+#   73 : 
+#   74 :   end process;
+# 
+# End time: 15:12:07 on Mar 25,2022, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 1

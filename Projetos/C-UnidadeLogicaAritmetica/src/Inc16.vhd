@@ -24,12 +24,15 @@ architecture rtl of Inc16 is
     port(
       a   :  in STD_LOGIC_VECTOR(15 downto 0);
       b   :  in STD_LOGIC_VECTOR(15 downto 0);
-      q   : out STD_LOGIC_VECTOR(15 downto 0)
+      q   : out STD_LOGIC_VECTOR(16 downto 0)
       );
   end component;
 
+  SIGNAL saidafalsa : STD_LOGIC_VECTOR(16 downto 0);
 begin
   -- Implementação vem aqui!
-  I1: Add16 port map(a => a, b => "0000000000000001", q => q);
+  I1: Add16 port map(a => a, b => "0000000000000001", q => saidafalsa);
+
+  q <= saidafalsa(15 downto 0);
 
 end architecture;
