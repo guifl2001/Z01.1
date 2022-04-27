@@ -10,7 +10,7 @@
 leaw $1, %A 
 movw %A, %D 
 leaw $5, %A 
-andw (%A), %D, %D 
+andw (%A), %D, %D
 
 leaw $IF, %A
 je %D 
