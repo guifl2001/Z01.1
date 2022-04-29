@@ -5,6 +5,7 @@
 
 ; faz uma subtracao binaria do valor de :  RAM[1] - RAM[0] gravando em RAM[2].
 
+
 leaw $1,%A         ; carrega a constant 1 em %A
 movw (%A),%D       ; move o valor da RAM[%A] para %D 
 leaw $0,%A         ; carrega a constant 0 em %A
