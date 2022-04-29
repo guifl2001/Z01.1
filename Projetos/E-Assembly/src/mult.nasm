@@ -5,6 +5,8 @@
 
 ; Multiplica o valor de RAM[1] com RAM[0] salvando em RAM[3]
 
+
+
 leaw $1, %A 
 
 movw (%A), %D
