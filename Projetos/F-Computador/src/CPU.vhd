@@ -99,5 +99,24 @@ architecture arch of CPU is
   signal s_pcout: STD_LOGIC_VECTOR(15 downto 0);
 
 begin
+  OURO: ControlUnit port map (instruction,c_zr,c_ng,c_muxALUI_A,c_muxAM,c_zx,c_nx,c_zy,c_ny,c_f,c_no,c_loadA,c_loadD,writeM,c_loadPC);
 
+
+  MuxALUI: Mux16 port map (s_ALUout,instruction(15 downto 0),c_muxALUI_A,s_muxALUI_Aout);
+  
+  REGA: Register16 port map (clock,s_muxALUI_Aout,c_loadA,s_regAout);
+
+  MuxAM_D: Mux16 port map (s_regAout,inM,c_muxAM,s_muxAM_out);
+
+  REGD: Register16 port map (clock,s_ALUout,c_loadD,s_regDout);  
+
+  ULA: ALU port map (s_regDout,s_regAout,c_zx,c_nx,c_zy,c_ny,c_f,c_no,c_zr,c_ng,s_ALUout);
+  
+  P: pc port map (clock,'1',c_loadPC,reset,s_regAout,s_pcout);
+
+  addressM <= s_regAout(14 downto 0);
+
+  outM <= s_ALUout;
+
+  pcout <= s_pcout(14 downto 0);
 end architecture;
