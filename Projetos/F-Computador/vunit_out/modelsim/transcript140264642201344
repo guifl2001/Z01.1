@@ -1,0 +1,30 @@
+# do /home/borg/.local/lib/python3.8/site-packages/vunit/sim_if/tcl_read_eval_loop.tcl
+# vsim -modelsimini /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/F-Computador/vunit_out/modelsim/modelsim.ini -wlf /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/F-Computador/vunit_out/test_output/lib.tb_controlunit.all_a75fe8e1779f6a1f2b60e6ef62d1d0adf3793143/modelsim/vsim.wlf -quiet -t ps -onfinish stop lib.tb_controlunit(tb) -L vunit_lib -L lib -g/tb_controlunit/runner_cfg="active python runner : true,enabled_test_cases : ,output path : /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/F-Computador/vunit_out/test_output/lib.tb_controlunit.all_a75fe8e1779f6a1f2b60e6ef62d1d0adf3793143/,tb path : /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/F-Computador/testes/,use_color : true" 
+# Start time: 17:20:31 on May 10,2022
+# ** Warning: Design size of 21655 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# ** Error:  **Falha** em jne %D
+#    Time: 4100 ps  Iteration: 0  Process: /tb_controlunit/main File: /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/F-Computador/testes/tb_ControlUnit.vhd
+# Break in Process main at /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/F-Computador/testes/tb_ControlUnit.vhd line 194
+# Stopped at /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/F-Computador/testes/tb_ControlUnit.vhd line 194
+# 
+# Test Run Failed!
+# 
+# Stack trace result from 'tb' command
+#  /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/F-Computador/testes/tb_ControlUnit.vhd 194 return [address 0xf6d697b4] Process main
+# 
+# 
+# Surrounding code from 'see' command
+#   189 :     instruction <= "10" & "000" & "001100" & "0000" & "101";
+#   190 :     zr <= '1';  ng <= '0';
+#   191 :     wait until clk = '1';
+#   192 :     assert(loadA  = '0' and loadD  = '0' and  loadM  = '0' and  loadPC = '0' and
+#   193 :            zx = '0' and nx = '0' and zy = '1' and ny = '1' and f = '0' and no = '0')
+# ->194 :       report " **Falha** em jne %D" severity error;
+#   195 : 
+#   196 :     -- jge %D : Nao salta
+#   197 :     instruction <= "10" & "000" & "001100" & "0000" & "001";
+#   198 :     zr <= '0';  ng <= '1';
+# 
+# End time: 17:20:31 on May 10,2022, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 1

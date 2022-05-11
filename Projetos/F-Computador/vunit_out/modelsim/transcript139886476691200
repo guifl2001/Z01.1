@@ -1,0 +1,46 @@
+# do /home/borg/.local/lib/python3.8/site-packages/vunit/sim_if/tcl_read_eval_loop.tcl
+# vsim -modelsimini /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/F-Computador/vunit_out/modelsim/modelsim.ini -wlf /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/F-Computador/vunit_out/test_output/lib.tb_controlunit.all_a75fe8e1779f6a1f2b60e6ef62d1d0adf3793143/modelsim/vsim.wlf -quiet -t ps -onfinish stop lib.tb_controlunit(tb) -L vunit_lib -L lib -g/tb_controlunit/runner_cfg="active python runner : true,enabled_test_cases : ,output path : /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/F-Computador/vunit_out/test_output/lib.tb_controlunit.all_a75fe8e1779f6a1f2b60e6ef62d1d0adf3793143/,tb path : /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/F-Computador/testes/,use_color : true" 
+# Start time: 14:45:58 on May 04,2022
+# ** Warning: Design size of 21655 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_controlunit/uCU/muxAM has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_controlunit/uCU/zx has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_controlunit/uCU/nx has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_controlunit/uCU/zy has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_controlunit/uCU/ny has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_controlunit/uCU/f has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_controlunit/uCU/no has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_controlunit/uCU/loadPC has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Error: TESTE 9: zx
+#    Time: 1700 ps  Iteration: 0  Process: /tb_controlunit/main File: /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/F-Computador/testes/tb_ControlUnit.vhd
+# Break in Process main at /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/F-Computador/testes/tb_ControlUnit.vhd line 99
+# Stopped at /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/F-Computador/testes/tb_ControlUnit.vhd line 99
+# 
+# Test Run Failed!
+# 
+# Stack trace result from 'tb' command
+#  /home/borg/elementos_de_sistemas/Z01.1-Boolean/Projetos/F-Computador/testes/tb_ControlUnit.vhd 99 return [address 0xf6d6803d] Process main
+# 
+# 
+# Surrounding code from 'see' command
+#   94 : 
+#   95 :     -- Teste: zx
+#   96 :     instruction <= "10" & "0001000000000000";
+#   97 :     wait until clk = '1';
+#   98 :     assert(zx = '1')
+# ->99 :       report "TESTE 9: zx" severity error;
+#   100 : 
+#   101 :     instruction <= "00" & "0001000000000000";
+#   102 :     wait until clk = '1';
+#   103 :     assert(zx = '0')
+# 
+# End time: 14:45:58 on May 04,2022, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 9

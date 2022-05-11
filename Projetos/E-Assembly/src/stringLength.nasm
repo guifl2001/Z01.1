@@ -49,6 +49,7 @@ leaw $1, %A
 addw $1, (%A), %D
 movw %D, (%A)
 
+
 leaw $LOOP, %A
 jmp
 nop
