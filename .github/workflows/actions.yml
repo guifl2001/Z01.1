@@ -47,7 +47,7 @@ jobs:
         pip install termcolor vunit_hdl pymongo 
       
     - name: teste vhdl
-      run: |
+      run:
         bash updateZ01tools.sh 
         python3 Projetos/B-LogicaCombinacional/testeLogicaCombinacional.py
         python3 Projetos/C-UnidadeLogicaAritmetica/testeULA.py
