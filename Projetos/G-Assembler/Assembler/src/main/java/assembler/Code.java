@@ -192,11 +192,19 @@ public class Code {
      * @return Valor em binário (String de 15 bits) representado com 0s e 1s.
      */
     public static String toBinary(String symbol) {
-        String binaria = Integer.toBinaryString(Integer.parseInt(symbol));
-        if (binaria.length() < 16){
-            return String.format("%016d", Integer.parseInt(binaria));
-        } else {
-            return binaria;
+        int num = Integer.valueOf(symbol);
+        String binario = "";
+        int resto = 0;
+
+        while (num > 0){
+            resto = num%2;
+            binario=resto+binario;
+            num = num/2;
         }
+
+        while (binario.length() != 16){
+            binario = '0' + binario;
+        }
+        return binario;
     }
 }
