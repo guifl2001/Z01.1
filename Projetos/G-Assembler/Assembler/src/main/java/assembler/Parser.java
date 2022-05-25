@@ -29,7 +29,23 @@ public class Parser {
         A_COMMAND,      // comandos LEA, que armazenam no registrador A
         C_COMMAND,      // comandos de calculos
         L_COMMAND       // comandos de Label (símbolos)
+        
     }
+
+    public static String valo(Integer j, String[] command){
+        Integer valor= 0;
+        for (int i= j; i < command.length; i++){
+            if (command[i].equals("%A")){
+                valor+= 1;
+            } else if (command[i].equals("%D")){
+                valor+= 2;
+            } else if (command[i].equals("(%A)")){
+                valor+= 4;
+            }
+        }
+        return String.format("%04d", Integer.parseInt(Integer.toBinaryString(valor)));
+    }
+
 
     /**
      * Abre o arquivo de entrada NASM e se prepara para analisá-lo.
@@ -88,8 +104,17 @@ public class Parser {
      * @return o tipo da instrução.
      */
     public CommandType commandType(String command) {
-        /* TODO: implementar */
-    	return null;
+    
+        if(command.startsWith("leaw")){
+            return CommandType.A_COMMAND;
+        }
+        else if(command.endsWith(":")){
+            return CommandType.L_COMMAND;
+        }
+        else {
+            return CommandType.C_COMMAND;
+        }
+    
     }
 
     /**
@@ -100,7 +125,9 @@ public class Parser {
      */
     public String symbol(String command) {
         /* TODO: implementar */
-    	return null;
+        String[] symbol = command.split(" ");
+        String[] symbol2 = symbol[1].split(",");
+    	return symbol2[0].replace("$","");
     }
 
     /**
@@ -111,7 +138,8 @@ public class Parser {
      */
     public String label(String command) {
         /* TODO: implementar */
-    	return null;
+
+    	return  command.replace(":","");
     }
 
     /**
@@ -122,7 +150,8 @@ public class Parser {
      */
     public String[] instruction(String command) {
         /* TODO: implementar */
-    	return null;
+        String[] symbol = command.replace(","," ").split(" ");
+    	return symbol;
     }
 
 
