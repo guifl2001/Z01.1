@@ -92,7 +92,7 @@ public class Assemble {
         parser.close();
         return table;
     }
-
+    
     /**
      * Segundo passo para a geração do código de máquina
      * Varre o código em busca de instruções do tipo A, C
