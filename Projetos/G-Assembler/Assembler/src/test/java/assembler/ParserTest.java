@@ -219,13 +219,27 @@ public class ParserTest {
             assertTrue("Parser advance()",parser_testJump.advance());
             assertTrue("Parser jge",parser_testJump.command().equals("jge"));
             assertTrue("Parser advance()",parser_testJump.advance());
+            // Adaptacao para nova feature de adicionar os nop apos jumps
+            assertTrue("Parser nop",parser_testJump.command().equals("nop"));
+            assertTrue("Parser advance()",parser_testJump.advance());
             assertTrue("Parser jg",parser_testJump.command().equals("jg"));
+            assertTrue("Parser advance()",parser_testJump.advance());
+            // Adaptacao para nova feature de adicionar os nop apos jumps
+            assertTrue("Parser nop",parser_testJump.command().equals("nop"));
             assertTrue("Parser advance()",parser_testJump.advance());
             assertTrue("Parser jle",parser_testJump.command().equals("jle"));
             assertTrue("Parser advance()",parser_testJump.advance());
+            // Adaptacao para nova feature de adicionar os nop apos jumps
+            assertTrue("Parser nop",parser_testJump.command().equals("nop"));
+            assertTrue("Parser advance()",parser_testJump.advance());
             assertTrue("Parser jl",parser_testJump.command().equals("jl"));
             assertTrue("Parser advance()",parser_testJump.advance());
+            // Adaptacao para nova feature de adicionar os nop apos jumps
+            assertTrue("Parser nop",parser_testJump.command().equals("nop"));
+            assertTrue("Parser advance()",parser_testJump.advance());
             assertTrue("Parser jmp",parser_testJump.command().equals("jmp"));
+            assertTrue("Parser advance()",parser_testJump.advance());
+            assertTrue("Parser nop",parser_testJump.command().equals("nop"));
             assertFalse("Parser advance()",parser_testJump.advance());
 
             Parser parser_testComp = new Parser("src/test/resources/testComp.nasm");
