@@ -10,6 +10,17 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.Objects;
+import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.List;
+import java.util.ArrayList;
+
 /**
  * Encapsula o código de leitura. Carrega as instruções na linguagem assembly,
  * analisa, e oferece acesso as partes da instrução  (campos e símbolos).
@@ -18,13 +29,14 @@ import java.io.IOException;
 public class Parser {
 
     private final BufferedReader fileReader;
+    private final BufferedReader fileNop;
     public String inputFile;		        // arquivo de leitura
     public int lineNumber = 0;		     	// linha atual do arquivo (nao do codigo gerado)
     public String currentCommand = "";      // comando atual
     public String currentLine;			    // linha de codigo atual
 
 
-    /** Enumerator para os tipos de comandos do Assembler. */
+    /** Enumerator para os tipos de comandos do Assembler. **/
     public enum CommandType {
         A_COMMAND,      // comandos LEA, que armazenam no registrador A
         C_COMMAND,      // comandos de calculos
@@ -32,29 +44,73 @@ public class Parser {
         
     }
 
-    public static String valo(Integer j, String[] command){
-        Integer valor= 0;
-        for (int i= j; i < command.length; i++){
-            if (command[i].equals("%A")){
-                valor+= 1;
-            } else if (command[i].equals("%D")){
-                valor+= 2;
-            } else if (command[i].equals("(%A)")){
-                valor+= 4;
-            }
-        }
-        return String.format("%04d", Integer.parseInt(Integer.toBinaryString(valor)));
+    public Parser(String file) throws IOException {
+        this.inputFile = file;
+        this.fileReader = new BufferedReader(new FileReader(file));
+        this.fileNop = new BufferedReader(new FileReader(file));
+        this.lineNumber = 0;
+        // Ao inicializar o parser, ele ira colocar automaticamento os nops faltando!
+        handleNop();
     }
 
 
-    /**
-     * Abre o arquivo de entrada NASM e se prepara para analisá-lo.
-     * @param file arquivo NASM que será feito o parser.
-     */
-    public Parser(String file) throws FileNotFoundException {
-        this.inputFile = file;
-        this.fileReader = new BufferedReader(new FileReader(file));
-        this.lineNumber = 0;
+    public void handleNop() throws IOException {
+        String commandLine;
+        boolean nopEsperado = false;
+        int linha = 0;
+        StringBuilder espaco = new StringBuilder();
+        List<String> novoFile = new ArrayList<>();
+
+        while ((commandLine = fileNop.readLine()) != null) {
+            linha++;
+            String noSpace = commandLine.replaceAll("\\s+", "");
+            List<String> tokens = new ArrayList<>(Arrays.asList(noSpace.split(",")));
+
+            if (nopEsperado){
+                // Se o ultimo comando for um jmp e o commando atual nao for um nop
+                if(!tokens.contains("nop")){
+                    System.out.printf("Esperado nop na linha %d%n", linha);
+                    System.out.println("Colocando automaticamente!");
+                    commandLine = espaco.toString() + "nop" + "\n" + commandLine;
+                }
+                nopEsperado = false;
+            }
+            espaco = new StringBuilder();
+            if (noSpace.length() > 0){
+                // Um nop e esperado quando o commando anterior começar com j -> apenas as operações de jump.
+                nopEsperado = Objects.equals(noSpace.charAt(0), 'j');
+                // Conta os espacos para que o nop seja colocado na identacao correta no nasm
+                for (int i = 0; i < commandLine.length(); i++){
+                    if (commandLine.charAt(i) == ' '){
+                        espaco.append(" ");
+                    } else{
+                        break;
+                    }
+                }
+            }
+            // Adiciona a linha a lista de geração do novo file.
+            novoFile.add(commandLine);
+        }
+        // Para caso haja um jmp na ultima linha, coloca um Nop apos
+        if (nopEsperado){
+            System.out.println("Nop esperado na ultima linha!");
+            System.out.println("Colocando automaticamente!");
+            String ultimo = espaco.toString() + "nop";
+            novoFile.add(ultimo);
+        }
+        fileNop.close();
+        // Começa a escrita do novo file com os nops adicionados
+        PrintWriter fileWriterNop = new PrintWriter(new FileWriter(inputFile));
+        for (int i = 0; i < novoFile.size(); i++){
+            // Logica para nao adicionar um espaco em branco a mais no fim do arquivo
+            if (i < novoFile.size() - 1){
+                fileWriterNop.write(novoFile.get(i) + System.lineSeparator());
+            } else {
+                fileWriterNop.write(novoFile.get(i));
+            }
+        }
+        // Fecha o writer e termina o método.
+        fileWriterNop.close();
     }
 
     // fecha o arquivo de leitura
@@ -149,9 +205,21 @@ public class Parser {
      * @return um vetor de string contento os tokens da instrução (as partes do comando).
      */
     public String[] instruction(String command) {
-        /* TODO: implementar */
-        String[] symbol = command.replace(","," ").split(" ");
-    	return symbol;
+        try {
+            command = command.replace("  ", " ");
+            command = command.replace("   ", " ");
+            command = command.replace("    ", " ");
+            command = command.replace("     ", " ");
+            command = command.replace(" ", ";");
+            command = command.replace(",", ";");
+            command = command.replace(";;", ";");
+
+        }
+        catch(Exception e) {
+            e.printStackTrace();
+        }
+        String[] instruction = command.split(";");
+        return instruction;
     }
 
 

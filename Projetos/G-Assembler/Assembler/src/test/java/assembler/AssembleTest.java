@@ -40,7 +40,7 @@ public class AssembleTest {
 
     @Test
     public void generateMachineCode() throws IOException {
-       // SymbolTable table = assembler.fillSymbolTable();
+        // SymbolTable table = assembler.fillSymbolTable();
         SymbolTable table = assembler.fillSymbolTable();
 
         assembler.generateMachineCode();

@@ -10,11 +10,16 @@ nop
 je
 nop
 jge
+nop
 
 jg
+nop
 
 jle
+nop
 
 jl
+nop
 
 jmp
+nop

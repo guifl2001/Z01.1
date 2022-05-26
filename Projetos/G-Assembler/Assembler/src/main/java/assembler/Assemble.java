@@ -34,7 +34,7 @@ public class Assemble {
         inputFile  = inFile;
         hackFile   = new File(outFileHack);                      // Cria arquivo de saída .hack
         outHACK    = new PrintWriter(new FileWriter(hackFile));  // Cria saída do print para
-                                                                 // o arquivo hackfile
+        // o arquivo hackfile
         table      = new SymbolTable();                          // Cria e inicializa a tabela de simbolos
     }
 
@@ -62,8 +62,8 @@ public class Assemble {
             } else {
                 romAddress++;
             }
-                // deve verificar se tal label já existe na tabela,
-                // se não, deve inserir. Caso contrário, ignorar.
+            // deve verificar se tal label já existe na tabela,
+            // se não, deve inserir. Caso contrário, ignorar.
         }
         parser.close();
 
