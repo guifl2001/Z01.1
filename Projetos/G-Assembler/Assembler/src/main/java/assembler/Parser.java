@@ -13,6 +13,13 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
+import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * Encapsula o código de leitura. Carrega as instruções na linguagem assembly,
@@ -29,7 +36,7 @@ public class Parser {
     public String currentLine;			    // linha de codigo atual
 
 
-    /** Enumerator para os tipos de comandos do Assembler. */
+    /** Enumerator para os tipos de comandos do Assembler. **/
     public enum CommandType {
         A_COMMAND,      // comandos LEA, que armazenam no registrador A
         C_COMMAND,      // comandos de calculos
@@ -198,9 +205,21 @@ public class Parser {
      * @return um vetor de string contento os tokens da instrução (as partes do comando).
      */
     public String[] instruction(String command) {
-        /* TODO: implementar */
-        String[] symbol = command.replace(","," ").split(" ");
-    	return symbol;
+        try {
+            command = command.replace("  ", " ");
+            command = command.replace("   ", " ");
+            command = command.replace("    ", " ");
+            command = command.replace("     ", " ");
+            command = command.replace(" ", ";");
+            command = command.replace(",", ";");
+            command = command.replace(";;", ";");
+
+        }
+        catch(Exception e) {
+            e.printStackTrace();
+        }
+        String[] instruction = command.split(";");
+        return instruction;
     }
 
 
