@@ -19,11 +19,13 @@ public class Code {
                 valor+= 2;
             } else if (mnemnonic[i].equals("(%A)")){
                 valor+= 4;
+            } else {
+                valor+= 0;
             }
         }
         return String.format("%04d", Integer.parseInt(Integer.toBinaryString(valor)));
     }
-
+    
     /**
      * Retorna o código binário do(s) registrador(es) que vão receber o valor da instrução.
      * @param  mnemnonic vetor de mnemônicos "instrução" a ser analisada.
@@ -185,18 +187,26 @@ public class Code {
         }
     }
 
-
     /**
      * Retorna o código binário de um valor decimal armazenado numa String.
      * @param  symbol valor numérico decimal armazenado em uma String.
      * @return Valor em binário (String de 15 bits) representado com 0s e 1s.
      */
     public static String toBinary(String symbol) {
-        String binaria = Integer.toBinaryString(Integer.parseInt(symbol));
-        if (binaria.length() < 16){
-            return String.format("%016d", Integer.parseInt(binaria));
-        } else {
-            return binaria;
+        int num = Integer.valueOf(symbol);
+        String binario = "";
+        int resto = 0;
+
+        while (num > 0){
+            resto = num%2;
+            binario=resto+binario;
+            num = num/2;
         }
+
+        while (binario.length() != 16){
+            binario = '0' + binario;
+        }
+        return binario;
     }
+
 }

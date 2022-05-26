@@ -88,19 +88,24 @@ public class Parser {
      * @return o tipo da instrução.
      */
     public CommandType commandType(String command) {
-        /* TODO: implementar */
-    	return null;
+        if (command.toLowerCase().contains("leaw")) {
+            return CommandType.A_COMMAND;
+        } else if (command.toLowerCase().contains(":")) {
+            return CommandType.L_COMMAND;
+        } else {
+            return CommandType.C_COMMAND;
+        }
     }
 
     /**
      * Retorna o símbolo ou valor numérico da instrução passada no argumento.
      * Deve ser chamado somente quando commandType() é A_COMMAND.
      * @param  command instrução a ser analisada.
-     * @return somente o símbolo ou o valor número da instrução.
+     * @return somente o símbolo ou o valor núme9ro da instrução.
      */
     public String symbol(String command) {
-        /* TODO: implementar */
-    	return null;
+        String[] parts = (command.split(" ")[1]).split(",");
+    	return parts[0].replace("$", "");
     }
 
     /**
@@ -110,8 +115,7 @@ public class Parser {
      * @return o símbolo da instrução (sem os dois pontos).
      */
     public String label(String command) {
-        /* TODO: implementar */
-    	return null;
+    	return command.replace(":", "");
     }
 
     /**
@@ -121,9 +125,20 @@ public class Parser {
      * @return um vetor de string contento os tokens da instrução (as partes do comando).
      */
     public String[] instruction(String command) {
-        /* TODO: implementar */
-    	return null;
+        try {
+            command = command.replace("  ", " ");
+            command = command.replace("   ", " ");
+            command = command.replace("    ", " ");
+            command = command.replace("     ", " ");
+            command = command.replace(" ", ";");
+            command = command.replace(",", ";");
+            command = command.replace(";;", ";");
+
+        }
+        catch(Exception e) {
+            e.printStackTrace();
+        }
+        String[] instruction = command.split(";");
+        return instruction;
+        }
     }
-
-
-}

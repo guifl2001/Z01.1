@@ -95,6 +95,7 @@ public class CodeTest  {
 
 			assertTrue("andw (%A) %D %D",Code.dest(new String[] {"andw","(%A)","%D","%D"}).equals("0010"));
 			assertTrue("andw %D %A %A",Code.dest(new String[] {"andw","%D","%A","%A"}).equals("0001"));
+			assertTrue("andw %A, %D, %D",Code.dest(new String[] {"andw","%A","%D","%D"}).equals("0010"));
 
 			assertTrue("orw (%A) %D %D",Code.dest(new String[] {"orw","(%A)","%D","%D"}).equals("0010"));
 			assertTrue("orw %D %A %A",Code.dest(new String[] {"orw","%D","%A","%A"}).equals("0001"));
@@ -132,6 +133,7 @@ public class CodeTest  {
 			assertTrue("addw %A   %D %D",Code.comp(new String[] {"addw","%A","%D","%D"}).equals("000000010"));
 			assertTrue("addw (%A) %D %D",Code.comp(new String[] {"addw","(%A)","%D","%D"}).equals("001000010"));
 			assertTrue("addw $1 (%A) %D",Code.comp(new String[] {"addw","$1","(%A)","%D"}).equals("001110111"));
+			assertTrue("andw %A, %D, %D",Code.comp(new String[] {"andw","%A","%D","%D"}).equals("000000000"));
 
 			assertTrue("incw %A"  ,Code.comp(new String[] {"incw","%A"}).equals("000110111"));
 			assertTrue("incw %D"  ,Code.comp(new String[] {"incw","%D"}).equals("000011111"));
@@ -199,6 +201,7 @@ public class CodeTest  {
 			assertTrue("negw %D",Code.jump(new String[] {"negw","%D"}).equals("000"));
 			assertTrue("andw (%A),%D,%D",Code.jump(new String[] {"andw","(%A)","%D","%D"}).equals("000"));
 			assertTrue("andw %D,%A,%A",Code.jump(new String[] {"andw","%D","%A","%A"}).equals("000"));
+			assertTrue("andw %D %A %A",Code.jump(new String[] {"andw","%D","%A","%A"}).equals("000"));
 			assertTrue("orw (%A),%D,%D",Code.jump(new String[] {"orw","(%A)","%D","%D"}).equals("000"));
 			assertTrue("orw %D,%A,%A",Code.jump(new String[] {"orw","%D","%A","%A"}).equals("000"));
 			assertTrue("jmp",Code.jump(new String[] {"jmp"}).equals("111"));

@@ -11,6 +11,7 @@ package assembler;
 
 import java.io.*;
 
+
 /**
  * Faz a geração do código gerenciando os demais módulos
  */
@@ -55,11 +56,14 @@ public class Assemble {
         while (parser.advance()){
             if (parser.commandType(parser.command()) == Parser.CommandType.L_COMMAND) {
                 String label = parser.label(parser.command());
-                /* TODO: implementar */
+                if (!table.contains(label)){
+                    table.addEntry(label, romAddress);
+                }
+            } else {
+                romAddress++;
+            }
                 // deve verificar se tal label já existe na tabela,
                 // se não, deve inserir. Caso contrário, ignorar.
-            }
-            romAddress++;
         }
         parser.close();
 
@@ -74,17 +78,21 @@ public class Assemble {
             if (parser.commandType(parser.command()) == Parser.CommandType.A_COMMAND) {
                 String symbol = parser.symbol(parser.command());
                 if (Character.isDigit(symbol.charAt(0))){
-                    /* TODO: implementar */
+                    if (!table.contains(symbol)){
+                        table.addEntry(symbol, ramAddress);
+                    }
                     // deve verificar se tal símbolo já existe na tabela,
                     // se não, deve inserir associando um endereço de
                     // memória RAM a ele.
                 }
+            } else {
+                ramAddress++;
             }
         }
         parser.close();
         return table;
     }
-
+    
     /**
      * Segundo passo para a geração do código de máquina
      * Varre o código em busca de instruções do tipo A, C
@@ -104,13 +112,20 @@ public class Assemble {
          */
         while (parser.advance()){
             switch (parser.commandType(parser.command())){
-                /* TODO: implementar */
                 case C_COMMAND:
-                break;
-            case A_COMMAND:
-                break;
-            default:
-                continue;
+                    String[] vetor = parser.instruction(parser.command());
+                    instruction = "10" + Code.comp(vetor) + Code.dest(vetor) + Code.jump(vetor);
+                    break;
+                case A_COMMAND:
+                    String symbol = parser.symbol(parser.command());
+                    if (!symbol.matches("-?\\d+")){
+                        instruction = "00" + Code.toBinary(table.getAddress(parser.symbol(parser.command())).toString());
+                    } else {
+                        instruction = "00" + Code.toBinary(parser.symbol(parser.command()));
+                    }
+                    break;
+                default:
+                    continue;
             }
             // Escreve no arquivo .hack a instrução
             if(outHACK!=null) {
