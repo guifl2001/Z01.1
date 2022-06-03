@@ -55,4 +55,5 @@ jobs:
         python3 Projetos/E-Assembly/testeAssembly.py
         python3 Projetos/F-Computador/testeHW.py 
         python3 Projetos/G-Assembler/testeAssembler.py
+        python3 Projetos/I-VMTranslator/testeVMtranslator.py
        
