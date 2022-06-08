@@ -16,6 +16,29 @@
 // ----------------------------------
 
 function Main.main 0
+  push constant 1
+  pop temp 3
+  // Inicializa o temp 2 com 0
+  push constant 0
+  pop temp 2
+  label loop
+    push temp 3
+    push constant 1
+    add
+    pop temp 3
+    // Incrementa o contador
+    push temp 2 
+    push constant 1
+    add
+    pop temp 2
+    push temp 2
+    push constant 53
+    gt
+    if-goto END
+    goto loop
+
+  label END
+
 
 
 
