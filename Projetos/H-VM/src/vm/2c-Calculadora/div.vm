@@ -1,1 +1,27 @@
 function div 2
+    // Inicializa com 1, conta que temp 0 > temp 1
+    push constant 1
+    pop temp 3
+    push argument 0
+    pop local 0
+    push argument 1
+    pop local 1
+    label loop
+        push local 0
+        push local 1
+        gt
+        not
+        if-goto end
+        push local 0
+        push local 1
+        sub 
+        pop local 0
+        push temp 3
+        push constant 1
+        add
+        pop temp 3
+        goto loop
+    
+    label end
+        push temp 3
+        return

@@ -13,7 +13,23 @@
 // ----------------------------------
 
 function Main.main 0
-
+  push constant 1
+  pop temp 3
+  label loop
+    push temp 0
+    push temp 1
+    gt
+    not
+    if-goto end
+    push temp 0
+    push temp 1
+    sub 
+    pop temp 0
+    push temp 3
+    push constant 1
+    add
+    pop temp 3
+    goto loop
    
 label end
 
