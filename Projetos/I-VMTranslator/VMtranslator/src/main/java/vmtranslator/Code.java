@@ -116,7 +116,7 @@ public class Code {
 
             // Se a subtração entra REG A e REG D = 0, entao ele desce pro loop TRUE e retorna true no SP (If D = 0 return True) 
             commands.add("leaw $TRUE, %A");
-            commands.add("je %D"); // compara
+            commands.add("je %D"); // comparação
             commands.add("nop");
             commands.add("leaw $0, %A");
             commands.add("movw %A, %D");
@@ -310,35 +310,185 @@ public class Code {
             } 
             
             else if (segment.equals("local")) {
+                                            
+                commands.add("leaw $0, %A");
+                commands.add("movw (%A), %D");
+                commands.add("decw %D");
+                commands.add("movw %D, (%A)");
+
+                commands.add("leaw $"+index+", %A");
+                commands.add("movw %A, %D");
+                commands.add("leaw $1, %A");
+                commands.add("addw (%A), %D, %D");
+
+                commands.add("leaw, $12, %A");
+                commands.add("movw, %D, (%A)");
+
+                commands.add("leaw $0, %A");
+                commands.add("movw (%A), %A");
+                commands.add("movw (%A),%D");
+
+                commands.add("leaw $12, %A");
+                commands.add("movw (%A), %A");
+                commands.add("movw %D, (%A)");
+               
                 
 
             } 
             
             else if (segment.equals("argument")) {
+                // Carrega o valor dentro do SP subtrai 1 e adiciona na RAM 0 a casa do SP que contem o ultimo valor
+                commands.add("leaw $0, %A");
+                commands.add("movw (%A), %D");
+                commands.add("decw %D");
+                commands.add("movw %D, (%A)");
+
+                commands.add("leaw $"+index+", %A");
+                commands.add("movw %A, %D");
+                commands.add("leaw $2, %A");
+                commands.add("addw (%A), %D, %D");
+
+                commands.add("leaw, $12, %A");
+                commands.add("movw, %D, (%A)");
+
+                commands.add("leaw $0, %A");
+                commands.add("movw (%A), %A");
+                commands.add("movw (%A),%D");
+
+                commands.add("leaw $12, %A");
+                commands.add("movw (%A), %A");
+                commands.add("movw %D, (%A)");
 
             }
             
             else if (segment.equals("this")) {
 
+                commands.add("leaw $0, %A");
+                commands.add("movw (%A), %D");
+                commands.add("decw %D");
+                commands.add("movw %D, (%A)");
+
+                commands.add("leaw $"+index+", %A");
+                commands.add("movw %A, %D");
+                commands.add("leaw $3, %A");
+                commands.add("addw (%A), %D, %D");
+
+                commands.add("leaw, $12, %A");
+                commands.add("movw, %D, (%A)");
+
+                commands.add("leaw $0, %A");
+                commands.add("movw (%A), %A");
+                commands.add("movw (%A),%D");
+
+                commands.add("leaw $12, %A");
+                commands.add("movw (%A), %A");
+                commands.add("movw %D, (%A)");
+
+
             } 
             
             else if (segment.equals("that")) {
 
+                commands.add("leaw $0, %A");
+                commands.add("movw (%A), %D");
+                commands.add("decw %D");
+                commands.add("movw %D, (%A)");
+
+                commands.add("leaw $"+index+", %A");
+                commands.add("movw %A, %D");
+                commands.add("leaw $4, %A");
+                commands.add("addw (%A), %D, %D");
+
+                commands.add("leaw, $12, %A");
+                commands.add("movw, %D, (%A)");
+
+                commands.add("leaw $0, %A");
+                commands.add("movw (%A), %A");
+                commands.add("movw (%A),%D");
+
+                commands.add("leaw $12, %A");
+                commands.add("movw (%A), %A");
+                commands.add("movw %D, (%A)");
+
+
             } 
             
             else if (segment.equals("static")) {
+                commands.add("leaw $0, %A");
+                commands.add("movw (%A), %D");
+                commands.add("decw %D");
+                commands.add("movw %D, (%A)");
+
+                commands.add("leaw $"+index+", %A");
+                commands.add("movw %A, %D");
+                commands.add("leaw $16, %A");
+                commands.add("addw (%A), %D, %D");
+
+                commands.add("leaw, $12, %A");
+                commands.add("movw, %D, (%A)");
+
+                commands.add("leaw $0, %A");
+                commands.add("movw (%A), %A");
+                commands.add("movw (%A),%D");
+
+                commands.add("leaw $12, %A");
+                commands.add("movw (%A), %A");
+                commands.add("movw %D, (%A)");
+
 
             } 
             
             else if (segment.equals("temp")) {
+                
+
+                // Carrega o valor dentro do SP subtrai 1 e adiciona na RAM 0 a casa do SP que contem o ultimo valor
+                commands.add("leaw $0, %A");
+                commands.add("movw (%A), %D");
+                commands.add("decw %D");
+                commands.add("movw %D, (%A)");
+
+                //Carrega o index no REG A e copia em D, depois le a RAM 5 e registra em A, efetua a soma entra o Reg A e o Index e salva em D
+                commands.add("leaw $"+index+", %A");
+                commands.add("movw %A, %D");
+                commands.add("leaw $5, %A"); // temp RAM[5]
+                commands.add("addw %A, %D, %D");
+
+                // Coloca no REG A a posição 13 da RAM e salva o valor da soma na memoria
+                commands.add("leaw, $13, %A");
+                commands.add("movw, %D, (%A)");
+ 
+                // Le o SP, e carrega a posição no REG D
+                commands.add("leaw $0, %A");
+                commands.add("movw (%A), %A");
+                commands.add("movw (%A),%D");
+
+                commands.add("leaw $13, %A");
+                commands.add("movw (%A), %A");
+                commands.add("movw %D, (%A)");
 
             } 
             
             else if (segment.equals("pointer")) {
                 if(index==0) {
+                    commands.add("leaw $0, %A");
+                    commands.add("movw (%A), %D");
+                    commands.add("decw %D");
+                    commands.add("movw %D, (%A)");
 
+                    commands.add("movw (%A), %A");
+                    commands.add("movw (%A), %D");
+                    commands.add("leaw $3, %A");
+                    commands.add("movw %D, (%A)");
                 } else {
+                    commands.add("leaw $0, %A");
+                    commands.add("movw (%A), %D");
+                    commands.add("decw %D");
+                    commands.add("movw %D, (%A)");
 
+                    commands.add("movw (%A), %A");
+                    commands.add("movw (%A), %D");
+                    commands.add("leaw $4, %A");
+                    commands.add("movw %D, (%A)");
                 }
             }
 
